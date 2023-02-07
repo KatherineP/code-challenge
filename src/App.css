@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: 1286px;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.list {
+  width: 70%;
+  padding: 2rem;
+}
+
+.detailInfo {
+  max-width: 30%;
+  padding: 2rem;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 733px) {
+  .list {
+    width: 50%;
+  }
+  
+  .detailInfo {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .list {
+    width: 40%;
+  }
+  
+  .detailInfo {
+    max-width: 60%;
+  }
+}

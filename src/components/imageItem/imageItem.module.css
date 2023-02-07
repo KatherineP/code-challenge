@@ -1,0 +1,47 @@
+.container{
+  flex-shrink: 1;
+  width: calc(25% - 22px);
+  margin-top: 2.5rem;
+}
+
+.image {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  height: 120px;
+  cursor: pointer;
+}
+
+.selectedImage {
+  padding: 2px;
+  border: 1px solid #4e03e5;
+}
+
+.fileName {
+  padding: 1rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  color: #929292;
+}
+
+@media screen and (max-width: 950px) {
+  .container{
+    width: calc(33% - 22px);
+  }
+}
+
+@media screen and (max-width: 733px) {
+  .container{
+    width: calc(52% - 22px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container{
+    width: 100%
+  }
+}

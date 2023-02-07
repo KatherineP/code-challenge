@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  justify-content: flex-start;
+}
+
+.noImagesTitle {
+  margin: 2rem 0;
+}
