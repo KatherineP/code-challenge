@@ -58,6 +58,12 @@ const imagePickerSlice = createSlice({
         )
         state.imageId = sortedImagesByDate[0].id
       }
+      if (state.images.length === 0) {
+        state.images = []
+      }
+      if (state.images.length === 1) {
+        state.imageId = state.images[0].id
+      }
     },
     updateFavorites: (state, action: PayloadAction<string>) => {
       const imageId = action.payload

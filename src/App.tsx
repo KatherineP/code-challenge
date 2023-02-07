@@ -48,28 +48,43 @@ function App() {
   }, [tabName])
 
   useEffect(() => {
-    if(tabName === 'favorited' && displayImages.length > 0) {
-      dispatch(saveImageId(displayImages[0].id));
+    if (tabName === 'favorited') {
+      if (displayImages.length > 0) {
+        dispatch(saveImageId(displayImages[0].id))
+      }
+      if (displayImages.length === 0) {
+        dispatch(saveImageId(''))
+      }
     }
   }, [displayImages])
 
   return (
     <main className='container'>
-      {error && <Error errorMessage={error}/>}
-      {loading && <Loader/>}
+      {error && <Error errorMessage={error} />}
+      {loading && <Loader />}
       {!error && !loading && (
         <div className='wrapper'>
           <div className='list'>
-            <Header onTabClick={handleTabClick} tabName={tabName}/>
-            <ImageList images={displayImages} onImageClick={handleImageClick} imageDetail={imageDetail}/>
+            <Header onTabClick={handleTabClick} tabName={tabName} />
+            <ImageList
+              images={displayImages}
+              onImageClick={handleImageClick}
+              imageDetail={imageDetail}
+            />
           </div>
-          <aside className='detailInfo'>
-            <ImageDetails image={imageDetail} onDeleteClick={handleDeleteImage} onFavoritedHandle={handleUpdateFavorites}/>
-          </aside>
+          {imageDetail && (
+            <aside className='detailInfo'>
+              <ImageDetails
+                image={imageDetail}
+                onDeleteClick={handleDeleteImage}
+                onFavoritedHandle={handleUpdateFavorites}
+              />
+            </aside>
+          )}
         </div>
-      )}  
+      )}
     </main>
-  );
+  )
 }
 
 export default App;
