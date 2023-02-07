@@ -1,7 +1,7 @@
 {
   "name": "aa-code-challange",
   "version": "0.1.0",
-  "homepage": "https://katherinep.github.io/image-picker",
+  "homepage": "https://katherinep.github.io/code-challenge",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
